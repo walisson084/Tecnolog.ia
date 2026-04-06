@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0d0d0d;
+    color: white;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+}
+
+.logo span {
+    color: #00ff99;
+}
+
+nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00ff99;
+}
+
+.contato-section {
+    text-align: center;
+    padding: 100px 20px 60px 20px;
+}
+
+.contato-section h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.contato-section p {
+    color: #ccc;
+    margin-bottom: 40px;
+}
+
+/* Formulário */
+.contato-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contato-form input,
+.contato-form textarea {
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #00ff99;
+    background: #111;
+    color: white;
+    font-size: 16px;
+}
+
+.contato-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contato-form button {
+    padding: 12px;
+    background: #00ff99;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contato-form button:hover {
+    background: #00cc7a;
+}
+
+/* Atendente WhatsApp */
+.chat-bot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 70px;
+    height: 70px;
+}
+
+.chat-bot img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 3px solid #00ff99;
+    box-shadow: 0 0 15px #00ff99;
+}
+
+/* Canvas fundo */
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+}

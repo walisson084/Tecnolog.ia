@@ -1,0 +1,223 @@
+/* Reset e fonte */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #0d0d0d;
+    color: rgb(255, 255, 255);
+    overflow-x: hidden;
+}
+
+/* Cabeçalho */
+header {
+    position: fixed;
+    width: 100%;
+    padding: 20px 10%;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(10px);
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #00ff99;
+}
+
+nav a {
+    color: rgb(218, 208, 62);
+    text-decoration: none;
+    margin-left: 20px;
+    transition: 0.3s;
+    filter: drop-shadow(0 0 15px rgb(255, 255, 255));
+}
+
+nav a:hover {
+    color: #00ff99;
+}
+
+/* Hero */
+.hero {
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    z-index: 1;
+    position: relative;
+}
+
+.hero h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.hero-logo {
+  width: 600px;
+  margin-bottom: 5px;
+  filter: drop-shadow(0 0 15px rgba(45, 231, 154, 0.3));
+}
+
+
+/* Canvas Fundo */
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* Produtos */
+.products {
+    padding: 50px 10%;
+    background-color: #111;
+}
+
+.products h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.products-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding-bottom: 10px;
+}
+
+.products-container::-webkit-scrollbar {
+    height: 10px;
+}
+
+.products-container::-webkit-scrollbar-thumb {
+    background-color: #00ff99;
+    border-radius: 5px;
+}
+
+.products-container a {
+    flex: 0 0 23%; /* 4 produtos visíveis */
+    display: block;
+}
+
+.products-container img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.products-container img:hover {
+    transform: scale(1.05);
+}
+
+/* Atendente Virtual no canto inferior direito com borda brilhante */
+.chat-bot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 80px;
+    height: 80px;
+    z-index: 50;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 0 20px #00ff99, 0 0 40px #00ff99, 0 0 60px #00ff99;
+    animation: glow 2s infinite alternate;
+}
+
+.chat-bot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 10px #00ff99, 0 0 20px #00ff99, 0 0 30px #00ff99; }
+    50% { box-shadow: 0 0 20px #00ff99, 0 0 40px #00ff99, 0 0 60px #00ff99; }
+    100% { box-shadow: 0 0 10px #00ff99, 0 0 20px #00ff99, 0 0 30px #00ff99; }
+}
+
+/* Conteúdo Sobre e Serviços */
+.content {
+    padding: 120px 10% 50px 10%;
+}
+
+.content h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+/* Contato */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.contact-form button {
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    background: #00ff99;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: #00cc77;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) { .products-container a { flex: 0 0 32%; } }
+@media (max-width: 768px) {
+    .hero h2 { font-size: 24px; }
+    .hero p { font-size: 15px; }
+    .products-container a { flex: 0 0 45%; }
+}
+@media (max-width: 480px) {
+    header { padding: 15px 5%; }
+    .logo { font-size: 24px; }
+    .hero h2 { font-size: 20px; }
+    .hero p { font-size: 14px; }
+    .hero button { padding: 10px 20px; font-size: 14px; }
+    .products-container a { flex: 0 0 70%; }
+}
+@media (max-width: 360px) {
+    .hero h2 { font-size: 18px; }
+    .hero p { font-size: 13px; }
+    .hero button { padding: 8px 18px; font-size: 12px; }
+    .products-container a { flex: 0 0 80%; }
+}
+

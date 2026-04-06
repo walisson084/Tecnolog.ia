@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Contato - Tecnolog.IA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contato.css">
+</head>
+<body>
+
+<header>
+    <h1 class="logo">Tecnolog.<span>IA</span></h1>
+    <nav>
+        <a href="tecnolog.ia.html">Home</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="contato.html">Contatos</a>
+    </nav>
+</header>
+
+<section class="contato-section">
+    <h2>Entre em Contato</h2>
+    <p>Preencha o formulário abaixo ou fale diretamente pelo WhatsApp!</p>
+
+    <form action="https://formsubmit.co/seuemail@dominio.com" method="POST" class="contato-form">
+        <input type="text" name="nome" placeholder="Seu nome" required>
+        <input type="email" name="email" placeholder="Seu email" required>
+        <input type="text" name="assunto" placeholder="Assunto" required>
+        <textarea name="mensagem" placeholder="Mensagem" required></textarea>
+        <button type="submit">Enviar Mensagem</button>
+    </form>
+</section>
+
+<!-- Atendente Virtual -->
+<a href="https://wa.me/5511958772928" target="_blank" class="chat-bot" id="chatBot">
+    <img src="imagens/MARIA.png" alt="Atendente Virtual">
+</a>
+
+<canvas id="background"></canvas>
+
+<script src="contato.js"></script>
+</body>
+</html>
